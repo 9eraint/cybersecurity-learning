@@ -4,8 +4,7 @@ I've just been accepted onto the NCSC credited Cyber Security Degree at the open
 
 This repository contains notes, exercises and small projects I've completed while learning.
 
- ## current focus
-
+## Current Focus
  - Linux
  - Networking
  - Python
