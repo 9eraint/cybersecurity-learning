@@ -1,0 +1,21 @@
+## CIA Triad
+
+Just an overview of the CIA triads, confidentiality, integrity and availability.
+
+Pretty simple high level overview.
+
+
+## Cryptography Concepts
+
+Learning about plain text vs cipher text, little game to encrypt and decrypt messages. Familiar with this style using rot13 in the past.
+
+Covered asymmetric and symmetric encryption, public and private keys for decryption as well as HTTPS certificates, Interesting module, learnt quite a bit here. Do need to revisit it in the future to ensure i understand it fully as it was quite a lot to take in.
+
+
+## Become an Attacker
+
+Ok this one was pretty cool, first using gobuster to find any hidden directories the website may have, then using Hydra to run the -l admin and -P password.txt to compare and crack the password used for the admin account. really interesting.
+
+## Become a Defender
+
+Also pretty cool, just looked at what a security defender would think about and the steps needed to not only prevent an attack but the steps if an attack occured.
