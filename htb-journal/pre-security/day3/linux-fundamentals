@@ -12,16 +12,41 @@
   - >: allows to redirect output into a file, will overwrite any current contents within that file
   - >>: This redirects the same as previous, but instead of overwritting it will add it onto the end of the file.
 
-  Moved onto fundamentals 2, 
+# Moved onto fundamentals 2, 
+    
     first time ssh into a lab using my own enviroment "SSH USER_NAME@HOST_IP", learnt the su command to switch users throught the system, and started using flags "-l", "-a" and "--help" to extend the command. Also the man command to look at the manual of the command being used.
       - touch: used to create a file, 
       - cp: copy a file,
       - mv: used to move a file, can also be used to rename a file if saved in the same directory, "mv folder1.txt folder1"
 
-  Now fundamentals 3
+# Now fundamentals 3
 
+  ## Terminal Text Editors
       - SSH into a new enviroment, and create a file using nano command. "nano 'Filename'"
+
+  ## General USeful Utilities
       - Transferring files from our machien to a remote machine using SCP, scp SOURCE DESTINATION: scp important.txt ubuntu@10.10.10.10:/home/Desktop/transferred.txt
-          and the reverse from a remote machine to ours: scp DESTINATION NAME_WE_WANT: scp ubuntu@10.10.10.10:/home/Desktop?documents.txt notes.txt
-      - 
+          ..and the reverse from a remote machine to ours: scp DESTINATION NAME_WE_WANT: scp ubuntu@10.10.10.10:/home/Desktop?documents.txt notes.txt
+      - Looking to grab a file via the hhtp.server method, python3 -m http.server on the ssh'd machine, then on my local machien using wget http://"IPADDRESS"/"FILENAME to download the document onto my local machine via the http.server on the other machine.
       
+  ## Processes101
+        learnt about PID's and running processes,
+          - Start: systemctl start myservice
+          - Stop: systemctl stop myservice
+          - Enable: systemctl enalbe myservice
+          - Disable: systemctl disable myservice
+          - Status: systemctl status myservice
+        Using the T^Z or the & operator to run the services in the background, then using fg myservice to bring it back into the terminal.
+        Different approaches to kill a process
+          - SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand
+          - SIGKILL - Kill the process - doesn't do any cleanup after the fact
+          - SIGSTOP - Stop/suspend a process
+        Still a bit confused on this one, not 100% sure what the process' are or what they do at a granular level, will need futher focus on this one to fully understand! 
+
+  ## Maintaining the system: Automation
+
+    - Not to much here, looked at the crontabs to check what the current system had its backups set as, this can be adjusted using the "crontab -e" command. for example:
+        0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/
+        An interesting feature of crontabs is that these also support the wildcard or asterisk (*). If we do not wish to provide a value for that specific field, i.e. we don't care what month, day, or year it is executed -- only that it is executed every 12 hours, we simply just place an asterisk.
+
+    Lastly i looked at the var/logs, in paticular the apache2 logs to see what ip address visited and what they accessed just by nano "filename" and checking the GET request.
