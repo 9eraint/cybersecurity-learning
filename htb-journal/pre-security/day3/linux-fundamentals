@@ -1,0 +1,27 @@
+# Linux Fundamentals
+
+  Started with basic navigation like ls and cd, then moved onto find -name passwords.txt for example, then also used the grep command to search for something within a file. example: grep "THM" access.log. 
+  - ls: List the contents of the directory
+  - cd: allows you to change directory
+  - cat: Shows the contents of a file
+  - pwd: print working directory, who am i?
+
+  Then onto operators,
+  - &: Runs the command but in the background, so allows you to keep working whilst it takes time to finish
+  - &&: 2 commands to run but the second only after the first one has finished.
+  - >: allows to redirect output into a file, will overwrite any current contents within that file
+  - >>: This redirects the same as previous, but instead of overwritting it will add it onto the end of the file.
+
+  Moved onto fundamentals 2, 
+    first time ssh into a lab using my own enviroment "SSH USER_NAME@HOST_IP", learnt the su command to switch users throught the system, and started using flags "-l", "-a" and "--help" to extend the command. Also the man command to look at the manual of the command being used.
+      - touch: used to create a file, 
+      - cp: copy a file,
+      - mv: used to move a file, can also be used to rename a file if saved in the same directory, "mv folder1.txt folder1"
+
+  Now fundamentals 3
+
+      - SSH into a new enviroment, and create a file using nano command. "nano 'Filename'"
+      - Transferring files from our machien to a remote machine using SCP, scp SOURCE DESTINATION: scp important.txt ubuntu@10.10.10.10:/home/Desktop/transferred.txt
+          and the reverse from a remote machine to ours: scp DESTINATION NAME_WE_WANT: scp ubuntu@10.10.10.10:/home/Desktop?documents.txt notes.txt
+      - 
+      
